@@ -25,6 +25,9 @@ export default {
 		env: Env,
 		ctx: ExecutionContext
 	): Promise<Response> {
-		return new Response("Hello World!");
+		const response = {
+			text: "Hello World!"
+		}
+		return new Response(JSON.stringify(response));
 	},
 };

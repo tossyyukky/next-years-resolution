@@ -2,6 +2,7 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { page } from '$app/stores'
 </script>
 
 <svelte:head>
@@ -19,6 +20,7 @@
 		</span>
 
 		to your new<br />SvelteKit app
+		<span>{$page.data.text}</span>
 	</h1>
 
 	<h2>
