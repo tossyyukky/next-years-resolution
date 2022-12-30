@@ -4,7 +4,8 @@ export const prerender = true;
 
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-  const res = await fetch(`https://get_resolutions.tossy-yukky.workers.dev`);
+  const res = await fetch(`/resolutions`);
+  console.log(res)
   const item = await res.json();
  
   return { item }
