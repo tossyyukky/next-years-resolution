@@ -1,8 +1,3 @@
-
-
-export async function onRequestGet(context) {
-    const response = {
-        text: 'Hello World!'
-    }
-    return new Response(JSON.stringify(response))
+export function onRequest(context) {
+  return new Response("Hello, world!")
 }
