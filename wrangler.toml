@@ -1,0 +1,7 @@
+
+
+compatibility_date = "2022-12-30"
+
+kv_namespaces = [
+    { binding = "next_years_resolutions_2022",id = "765ecdda0ff045f0b01d4d08bbbd5552", preview_id = "453b44e291b343439d8867a9b0d7d6d5" }
+]

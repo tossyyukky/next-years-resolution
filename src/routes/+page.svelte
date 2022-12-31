@@ -3,6 +3,10 @@
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import { page } from '$app/stores'
+
+	console.log($page.data)
+
+	const hashtag = "uhyo"
 </script>
 
 <svelte:head>
@@ -11,23 +15,26 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-		<span>{$page.data.text}</span>
+	<h1 class="wf-roundedmplus1c">
+		2023年の抱負を共有しましょう
 	</h1>
 
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
 
-	<Counter />
+	<form method="POST">
+		<label>
+		名前（任意）
+			<input name="poster" type="text">
+		</label>
+		<label>
+			抱負
+			<input name="text" type="text">
+		</label>
+		<button>Send</button>
+	</form>
+
 </section>
 
 <style>
